@@ -26,11 +26,11 @@ Example:
 `./cedfp.x86_64 localhost 9326 pool.private-locker.com 6239 \`  
 `0x0123456789AbCdEf0123456789aBcDeF01234567.devflea`
 
-The workername can be different.  I suggest using a unique worker name just to see your devfleas come back :)
+The workername can be different.  We suggest using a unique worker name just to see your devfleas come back :)
 
 Ports can be within the range of 1024 to 65535
 
-Your wallet address is case sensitive, make it the same as in your miner config.  If you do not set it exactly the same EVERY connection will be considered a devflea!  I do not want to see a 12 gpu rig connect on a donation round and mine there for 12hrs m'k.  Ok I'm lieing... but don't do it :) Make sure your normal miners are not detected as a devfleas.  
+Your wallet address is case sensitive, make it the same as in your miner config.  If you do not set it exactly the same EVERY connection will be considered a devflea!  We do not want to see a 12 gpu rig connect on a donation round and mine there for 12hrs m'k.  Ok I'm lieing... but don't do it :) Make sure your normal miners are not detected as a devfleas.  
 
 &nbsp;
 
@@ -39,7 +39,7 @@ Tested with Claymore v11.8 without -allpools. (I do not know a pool that needs i
 
 &nbsp;
 
-First of all, I would like to start with a list of things that __***DO NOT WORK***!__  
+First of all, we would like to start with a list of things that __***DO NOT WORK***!__  
 
 ### __DO ***NOT*** DO THIS:__  
 
@@ -98,7 +98,7 @@ A)
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-Claymore stops complaining about being behind a proxy  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-Claymore stops staling shares  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-devflea goes through pool ssl port  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(the proxy is not ssl "YET!" I do not even know if that will work "YET!")  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(the proxy is not ssl "YET!" We do not even know if that will work "YET!")  
 
 B)  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Set the proxy transparent on a random port  
