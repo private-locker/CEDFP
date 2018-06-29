@@ -4,7 +4,7 @@
 ### Warning:  
 This software is for educational purposes only. :P  
 There, you can't sue me now. ;)  
-The authors will take no responsibility for any damages (legal, material, physical, monetery, emotional and/or mental) caused by the use or missuse of their creation.  
+The authors will take no responsibility for any damages (legal, material, physical, monetery, emotional and/or mental) caused by the use or misuse of their creation.  
 AKA: "You're on your own buddy."
 
 By using this program you agree to donate 1 out of 100 intercepted devfees to the developers.  
