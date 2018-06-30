@@ -30,7 +30,7 @@ The workername can be different.  We suggest using a unique worker name just to 
 
 Ports can be within the range of 1024 to 65535.
 
-Your wallet address is case sensitive, make it the same as in your miner config.  If you do not set it exactly the same EVERY connection will be considered a devflea!  We do not want to see a 12 gpu rig connect on a donation round and mine there for 12hrs m'k.  Ok I'm lieing... but don't do it :) Make sure your normal miners are not detected as a devflea.
+Your wallet address is case sensitive, make it the same as in your miner config.  If you do not set it exactly the same EVERY connection will be considered a devflea!  We do not want to see a 12 gpu rig connect on a donation round and mine there for 12hrs m'k.  Ok I'm lying... but don't do it :) Make sure your normal miners are not detected as a devflea.
 
 &nbsp;
 
