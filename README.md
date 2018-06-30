@@ -23,14 +23,18 @@ Usage:
 `<your wallet address(. or /)workername>`
 
 Example:  
-`./cedfp.x86_64 localhost 9326 pool.private-locker.com 6239 \`  
+`./cedfp.amd64 localhost 9326 pool.private-locker.com 6239 \`  
 `0x0123456789AbCdEf0123456789aBcDeF01234567.devflea`
 
 The workername can be different.  We suggest using a unique worker name just to see your devfleas come back :)
 
-Ports can be within the range of 1024 to 65535
+Ports can be within the range of 1024 to 65535.
 
-Your wallet address is case sensitive, make it the same as in your miner config.  If you do not set it exactly the same EVERY connection will be considered a devflea!  We do not want to see a 12 gpu rig connect on a donation round and mine there for 12hrs m'k.  Ok I'm lieing... but don't do it :) Make sure your normal miners are not detected as a devfleas.  
+Your wallet address is case sensitive, make it the same as in your miner config.  If you do not set it exactly the same EVERY connection will be considered a devflea!  We do not want to see a 12 gpu rig connect on a donation round and mine there for 12hrs m'k.  Ok I'm lieing... but don't do it :) Make sure your normal miners are not detected as a devflea.
+
+&nbsp;
+
+**Designed from the ground up with low latency in mind.**
 
 &nbsp;
 
@@ -115,7 +119,7 @@ A) Will probably work when I add ssl to the proxy
 If you do not know what a transparent proxy is, Google it ;)  
 For my installation I used my OpenWRT router to host the transparent proxy.  My rig is hopping through that point anyways so it's not an extra network hop, practically 0ms latency this way.  Now I will not go into the details of turning your stock router into a Linux  based open source routing monster, but you can visit OpenWRTs website it's all there.
 
-Any linux i386, x86_64, mips will run this proxy, use what you've got.
+Any linux i386, amd64, mips will run this proxy, use what you've got.
 
 &nbsp;
 
