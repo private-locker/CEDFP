@@ -133,16 +133,16 @@ C) SSH your router as root
 
 D) Package installation, we need a few things type in these commands:  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`root@OpenWRT:~# opkg update`  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`root@OpenWRT:~# opkg install libpthread wget openssl-util screen`  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`root@OpenWRT:~# opkg install libpthread wget openssl-util screen nano`
 
 E) Add a proxy user because you never want to run anything as root unless you really have to:  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`root@OpenWRT:~# echo "proxy:x:1000:1000:proxy:/home/proxy:/bin/ash" >> /etc/passwd`  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`root@OpenWRT:~# echo "proxy:x:1000:" >> /etc/group`  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`root@OpenWRT:~# mkdir -p /home/proxy`  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`root@OpenWRT:~# chown 1000:1000 /home/proxy`  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`root@OpenWRT:~# chown 1000:1000 /home/proxy`
 
 F) Set the new users password:  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`root@OpenWRT:~# passwd proxy`  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`root@OpenWRT:~# passwd proxy`
   
   
 G) Set the transparent proxy firewall rule:  
@@ -161,21 +161,21 @@ G) Set the transparent proxy firewall rule:
 H) Restart the firewall to apply the custom rule:  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`root@OpenWRT:~# /etc/init.d/firewall restart`
 
-I) Logout of your router, login with new proxy user.  
-  
+I) Logout of your router, login with new proxy user.
+
 J) Download CEDFP uncompress it and delete the tarball:  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`proxy@OpenWRT:~# wget https://github.com/private-locker/CEDFP/raw/master/cedfp-current-mips.tar`  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`proxy@OpenWRT:~# tar -xf cedfp-current-mips.tar`  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`proxy@OpenWRT:~# rm cedfp-current-mips.tar`  
-  
+
 K) Start a proxy screen (that screen program we installed earlier) If you don't know how to use it, Google is your best friend.  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`proxy@OpenWRT:~# screen -S proxy`  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`proxy@OpenWRT:~# screen -S proxy`
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ok... just the basics do:  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"CTRL+a d" (you just exited the screen)  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Type: `screen -r proxy` (you just rejoined your proxy screen)  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Rince and repeate 3 times so you remember :P  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;You can view your screen list and see if you are attached to it with: `screen -list`  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;You can view your screen list and see if you are attached to it with: `screen -list`
 
 L) Make sure you are attached to your screen! start your proxy:  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`./cedfp.mips <router lan ip/hostname> <proxy local port> <pool ip/hostname> <pool non ssl port #> \`
@@ -183,25 +183,25 @@ L) Make sure you are attached to your screen! start your proxy:
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;example:  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`./cedfp.mips 192.168.0.1 54321 eth.private-locker.com 6824 \`  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`0x0123456789AbCdEf0123456789aBcDeF01234567.devflea`  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`0x0123456789AbCdEf0123456789aBcDeF01234567.devflea`
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;You can sit there and watch it or "CTRL+a d" out of your screen and logout of your router.  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;You can always rejoin your screen later, just ssh your router with the proxy user and type:  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`screen -r proxy`  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`screen -r proxy`
 
-M) Set claymore to connect to the pools hostname with that random port # you chose in the firewall rule. Start Claymore  
+M) Set claymore to connect to the pools hostname with that random port # you chose in the firewall rule. Start Claymore
 
 &nbsp;
 
 Future plans:  
 A) Add SSL support.  
-B) Lower the donation agreement when the authors can eat 3 meals a day. (a car and house would be nice too) ;)  
+B) Lower the donation agreement when the authors can eat 3 meals a day. (a car and house would be nice too) ;)
 
 &nbsp;
 
 Inspiration:  
 A) Realizing that Claymore is making MILLIONS a month off the back of little homebrew GPU miners.  
-B) Robin Hood, Steal from the rich give to the poor.  
+B) Robin Hood, Steal from the rich give to the poor.
 
 &nbsp;
 
