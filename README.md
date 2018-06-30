@@ -158,7 +158,7 @@ G) Set the transparent proxy firewall rule:
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Save and exit "CTRL+x"
 
-H) Restart the firewall to apply the custom rule:
+H) Restart the firewall to apply the custom rule:  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`root@OpenWRT:~# /etc/init.d/firewall restart`
 
 I) Logout of your router, login with new proxy user.  
