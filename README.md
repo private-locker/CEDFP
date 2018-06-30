@@ -148,7 +148,7 @@ F) Set the new users password:
 G) Set the transparent proxy firewall rule:  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`root@OpenWRT:~#  nano /etc/firewall.user`
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Add this line to the bottom:
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Add this line to the bottom:  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`iptables -t nat -I PREROUTING -p tcp -d <pool hostname> --dport <some random port #> \`  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`-j REDIRECT --to-port <proxy local port>`
 
