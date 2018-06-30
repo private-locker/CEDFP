@@ -11,7 +11,7 @@ By using this program you agree to donate 1 out of 100 intercepted devfees to th
 (About one devflea session every 4 days)  
 
 Written by somebody for the private-locker community.  
-The "Community Owned" pools  
+The "Community Owned" pools.  
 https://www.private-locker.com/  
 https://discord.gg/4tHbunB  
 https://twitter.com/Private_Locker  
@@ -172,8 +172,8 @@ K) Start a proxy screen (that screen program we installed earlier) If you don't 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`proxy@OpenWRT:~# screen -S proxy`
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ok... just the basics do:  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"CTRL+a d" (you just exited the screen)  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Type: `screen -r proxy` (you just rejoined your proxy screen)  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"CTRL+a d" (you have just exited the screen)  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Type: `screen -r proxy` (you have just rejoined your proxy screen)  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Rince and repeate 3 times so you remember :P  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;You can view your screen list and see if you are attached to it with: `screen -list`
 
