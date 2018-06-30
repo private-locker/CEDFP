@@ -146,22 +146,29 @@ F) Set the new users password:
   
   
 G) Set the transparent proxy firewall rule:  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`root@OpenWRT:~# iptables -t nat -I PREROUTING -p tcp -d <pool hostname> --dport <some random port #> \`  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`-j REDIRECT --to-port <proxy local port>`  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`root@OpenWRT:~#  nano /etc/firewall.user`
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Add this line to the bottom:
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`iptables -t nat -I PREROUTING -p tcp -d <pool hostname> --dport <some random port #> \`  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`-j REDIRECT --to-port <proxy local port>`
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;example:  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`root@OpenWRT:~# iptables -t nat -I PREROUTING -p tcp -d eth.pool.private-locker.com \`  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`--dport 12345 -j REDIRECT --to-port 54321`  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`--dport 12345 -j REDIRECT --to-port 54321`
 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Save and exit "CTRL+x"
 
-G) Logout of your router, login with new proxy user.  
+H) Restart the firewall to apply the custom rule:
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`root@OpenWRT:~# /etc/init.d/firewall restart`
+
+I) Logout of your router, login with new proxy user.  
   
-H) Download CEDFP uncompress it and delete the tarball:  
+J) Download CEDFP uncompress it and delete the tarball:  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`proxy@OpenWRT:~# wget https://github.com/private-locker/CEDFP/raw/master/cedfp-current-mips.tar`  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`proxy@OpenWRT:~# tar -xf cedfp-current-mips.tar`  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`proxy@OpenWRT:~# rm cedfp-current-mips.tar`  
   
-I) Start a proxy screen (that screen program we installed earlier) If you don't know how to use it, Google is your best friend.  
+K) Start a proxy screen (that screen program we installed earlier) If you don't know how to use it, Google is your best friend.  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`proxy@OpenWRT:~# screen -S proxy`  
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ok... just the basics do:  
@@ -170,7 +177,7 @@ I) Start a proxy screen (that screen program we installed earlier) If you don't 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Rince and repeate 3 times so you remember :P  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;You can view your screen list and see if you are attached to it with: `screen -list`  
 
-J) Make sure you are attached to your screen! start your proxy:  
+L) Make sure you are attached to your screen! start your proxy:  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`./cedfp.mips <router lan ip/hostname> <proxy local port> <pool ip/hostname> <pool non ssl port #> \`
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`<your wallet address(. or /)workername>`
 
@@ -182,7 +189,7 @@ J) Make sure you are attached to your screen! start your proxy:
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;You can always rejoin your screen later, just ssh your router with the proxy user and type:  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`screen -r proxy`  
 
-K) Set claymore to connect to the pools hostname with that random port # you chose in the firewall rule. Start Claymore  
+M) Set claymore to connect to the pools hostname with that random port # you chose in the firewall rule. Start Claymore  
 
 &nbsp;
 
