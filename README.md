@@ -178,11 +178,11 @@ K) Start a proxy screen (that screen program we installed earlier) If you don't 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;You can view your screen list and see if you are attached to it with: `screen -list`
 
 L) Make sure you are attached to your screen! start your proxy:  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`./cedfp.mips <router lan ip/hostname> <proxy local port> <pool ip/hostname> <pool non ssl port #> \`
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`proxy@OpenWRT:~# ./cedfp.mips <router lan ip/hostname> <proxy local port> <pool ip/hostname> <pool non ssl port #> \`
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`<your wallet address(. or /)workername>`
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;example:  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`./cedfp.mips 192.168.0.1 54321 eth.private-locker.com 6824 \`  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`proxy@OpenWRT:~# ./cedfp.mips 192.168.0.1 54321 eth.private-locker.com 6824 \`  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`0x0123456789AbCdEf0123456789aBcDeF01234567.devflea`
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;You can sit there and watch it or "CTRL+a d" out of your screen and logout of your router.  
