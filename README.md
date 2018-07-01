@@ -178,8 +178,8 @@ K) Start a proxy screen (that screen program we installed earlier) If you don't 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;You can view your screen list and see if you are attached to it with: `screen -list`
 
 L) Make sure you are attached to your screen! start your proxy:  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`proxy@OpenWRT:~# ./cedfp.mips <router lan ip/hostname> <proxy local port> <pool ip/hostname> <pool non ssl port #> \`
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`<your wallet address(. or /)workername>`
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`proxy@OpenWRT:~# ./cedfp.mips <router lan ip/hostname> <proxy local port> <pool ip/hostname> \`  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`<pool non ssl port #> <your wallet address(. or /)workername>`
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;example:  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`proxy@OpenWRT:~# ./cedfp.mips 192.168.0.1 54321 eth.private-locker.com 6824 \`  
