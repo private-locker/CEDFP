@@ -153,7 +153,7 @@ G) Set the transparent proxy firewall rule:
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`-j REDIRECT --to-port <proxy local port>`
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;example:  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`root@OpenWRT:~# iptables -t nat -I PREROUTING -p tcp -d eth.pool.private-locker.com \`  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`iptables -t nat -I PREROUTING -p tcp -d eth.pool.private-locker.com \`  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`--dport 12345 -j REDIRECT --to-port 54321`
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Save and exit "CTRL+x"
